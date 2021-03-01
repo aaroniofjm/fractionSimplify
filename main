@@ -1,0 +1,37 @@
+@@ -0,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int nume=24, den=68;
+
+    cin>>nume>>den;
+
+    if (den==0)
+    {
+        return -1;
+    }
+
+
+    cout<<nume<<"/"<<den<<endl;
+
+    //reduce
+
+    for (int i = den; i > 1; i--) {
+        if (nume%i==0 && den%i==0)
+        {
+            nume /= i;
+            den /= i;
+        }
+
+    }
+
+    cout <<"after reduction"<<endl;
+    cout<<nume<<"/"<<den;
+
+
+
+
+    return 0;
+}
